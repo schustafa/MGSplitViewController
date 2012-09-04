@@ -130,6 +130,9 @@
 	_vertical = YES;
 	_masterBeforeDetail = YES;
 	_splitPosition = MG_DEFAULT_SPLIT_POSITION;
+}
+
+- (void)awakeFromNib {
 	CGRect divRect = self.view.bounds;
 	if ([self isVertical]) {
 		divRect.origin.y = _splitPosition;
@@ -143,7 +146,6 @@
 	_dividerView.backgroundColor = MG_DEFAULT_CORNER_COLOR;
 	_dividerStyle = MGSplitViewDividerStyleThin;
 }
-
 
 - (void)dealloc
 {
