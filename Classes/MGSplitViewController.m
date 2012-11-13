@@ -145,6 +145,9 @@
 	_dividerView.splitViewController = self;
 	_dividerView.backgroundColor = MG_DEFAULT_CORNER_COLOR;
 	_dividerStyle = MGSplitViewDividerStyleThin;
+
+  // Fix issue where loading the app in landscape view results in vertically-truncated views
+  self.view.autoresizesSubviews = NO;
 }
 
 - (void)dealloc
